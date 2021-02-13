@@ -6,16 +6,28 @@
 a{
 	color: #B57EDC;
 	font-weight: bold;
+	font-family: Helvetica, Arial, sans-serif;
 }
 
 h1{
-	color: #311432
+	color: #311432;
+	font-family: Helvetica, Arial, sans-serif;
 }
 
 h2{
-	color: #4c0121
+	color: #4c0121;
+	font-family: Helvetica, Arial, sans-serif;
 }
 
 h3{
-	color: #663046
+	color: #663046;
+	font-family: Helvetica, Arial, sans-serif;
+}
+
+p{
+	font-family: Helvetica, Arial, sans-serif;
+}
+
+#home-link{
+	font-style: italic;
 }
