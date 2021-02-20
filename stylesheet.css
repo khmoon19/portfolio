@@ -1,3 +1,36 @@
+nav{
+	background-color: #B57EDC;
+	padding: 5px;
+  }
+  
+  nav ul{
+	list-style-type: none;
+	display: inline;
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: 18px;
+	display: flex;
+	justify-content: space-between;
+	padding: 0 10px;
+  }
+  
+  nav a{
+	color: #311432;
+  }
+  
+  @media (max-width: 768px){
+	nav ul{
+	  display: block;
+	}
+	nav li{
+	  margin: auto;
+	  padding: 10px;
+	  text-align: center;
+	}
+	
+  }
+
+
+
 .project-photos{
 	width: 25%;
 	height: auto;
