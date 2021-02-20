@@ -68,3 +68,10 @@ p{
 	border: 5px solid #311432;
 	border-radius: 5px;
 }
+
+@media (prefers-color-scheme: dark){
+	html{
+		background-color: black;
+		color: white;
+	}
+}
