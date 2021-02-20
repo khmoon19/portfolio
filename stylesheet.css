@@ -29,5 +29,9 @@ p{
 }
 
 #home-link{
-	font-style: italic;
+	display: inline-block;
+	background: #4c0121;
+	padding: 10px 15px;
+	border: 5px solid #311432;
+	border-radius: 5px;
 }
