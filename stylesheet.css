@@ -60,6 +60,9 @@ h3{
 p{
 	font-family: Helvetica, Arial, sans-serif;
 }
+.icon-large{
+	font-size: 24px;
+}
 
 #home-link{
 	display: inline-block;
