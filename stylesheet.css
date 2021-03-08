@@ -32,6 +32,10 @@ p{
 	font-size: 24px;
 }
 
+.breadcrumb{
+	color: #782FAC;
+}
+
 @media (prefers-color-scheme: dark){
 	html{
 		background-color: black;
