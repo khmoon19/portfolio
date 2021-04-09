@@ -86,7 +86,7 @@
 
             //sends data to display in p tags above
             function useApiData(data){
-                document.querySelector("#category").innerHTML = 'Category: ${data.results[0].category}'
+                document.querySelector("#category").innerHTML = 'Category:' + ${data.results[0].category}
                 document.querySelector("#difficulty").innerHTML = 'Difficulty: ${data.results[0].difficulty}'
                 document.querySelector("#question").innerHTML = 'Question: ${data.results[0].question}'
             }
