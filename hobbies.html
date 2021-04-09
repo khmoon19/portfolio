@@ -72,8 +72,8 @@
         <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>   
         <script>
             
-
             window.onload = sendApiRequest
+
             //An asynchronous function to fetch data from the API.
             async function sendApiRequest(){
                 let response = await fetch(`https://opentdb.com/api.php?amount=1&type=multiple`);
@@ -84,9 +84,10 @@
             }
 
 
-            //function that does something with the data received from the API. The name of the function should be customized to whatever you are doing with the data
+            //sends data to display in p tags above
             function useApiData(data){
                 document.querySelector("#category").innerHTML = 'Category: ${data.results[0].category}'
+                document.querySelector("#difficulty").innerHTML = 'Difficulty: ${data.results[0].difficulty}'
             }
         </script>
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
