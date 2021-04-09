@@ -2,7 +2,7 @@
 <html>
 
 	<head>
-		<title> Katie Moon's Website </title>
+		<title> Katie's Hobbies </title>
 		<meta charset="utf-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -28,7 +28,33 @@
         </nav>
 
 
-        
+        <h1>
+            Trivia Game
+          </h1>
+          <p id="category">
+
+          </p>
+          <p id="difficulty">
+
+          </p>
+          <p id="question">
+              
+          </p>
+          <button id="answer 1">
+
+          </button>
+          <button id="answer 2">
+              
+          </button>
+          <button id="answer 3">
+              
+          </button>
+          <button id="answer 4">
+              
+          </button>
+          <div id="content">
+            
+          </div>
 
 
 
@@ -45,16 +71,24 @@
 
         <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>   
         <script>
-            $(document).ready(function(){
-                
-                  var trivia = $.get("https://opentdb.com/api.php?amount=10");
-                  
-                  //Function that runs when the API runs successfully
-                  trivia.done(function(response){
-                    
-                });
-              });
-            </script>
+            
+
+            window.onload = sendApiRequest
+            //An asynchronous function to fetch data from the API.
+            async function sendApiRequest(){
+                let response = await fetch(`https://opentdb.com/api.php?amount=1&type=multiple`);
+                console.log(response)
+                let data = await response.json()
+                console.log(data)
+                useApiData(data)
+            }
+
+
+            //function that does something with the data received from the API. The name of the function should be customized to whatever you are doing with the data
+            function useApiData(data){
+                document.querySelector("#category").innerHTML = 'Category: ${data.results[0].category}'
+            }
+        </script>
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
