@@ -118,14 +118,14 @@
                 document.querySelector("#answer2").innerHTML = data.results[0].incorrect_answers[0];
                 document.querySelector("#answer3").innerHTML = data.results[0].incorrect_answers[1];
                 document.querySelector("#answer4").innerHTML = data.results[0].incorrect_answers[2];
+                document.querySelector("#correct").innerHTML = data.results[0].correct_answer;
             }
         </script>
 
         <script>
             $(document).ready(function(){
-                document.querySelector("correct").innerHTML = data.results[0].correct_answer;
                 $("#showAnswer").click(function(){
-                    $("correct").toggle();
+                    $("#correct").toggle();
                 });
             });
         </script>
