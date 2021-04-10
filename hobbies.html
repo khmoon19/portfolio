@@ -84,7 +84,7 @@
             Show Answer
         </button>
 
-        <p id="correct"  hidden>
+        <p id="correct">
         </p>
 
         <br>
@@ -132,6 +132,7 @@
 
         <script>
             $(document).ready(function(){
+                $("#correct").hide();
                 $("#showAnswer").click(function(){
                     $("#correct").toggle();
                 });
