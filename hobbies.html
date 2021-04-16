@@ -90,6 +90,48 @@
         <br>
         <br>
 
+        <h2>
+            Movies
+        </h2>
+
+        <p>
+            I love movies and am a huge MCU fan so here is the next MCU feture coming out closest to the date entered.
+        </p>
+
+        <h3>
+            Input Date:
+        </h3>
+
+        <div id="date">
+            <label for="date">Date</label>
+            <input type="date" id="date-input">
+        </div>
+
+        <button id = "enter">
+
+        </button>
+
+        <p id = "days-until">
+
+        </p>
+
+        <p id = "overview">
+
+        </p>
+
+        <p id = "release-date">
+
+        </p>
+
+        <p id = "title">
+
+        </p>
+
+        <p id = "type">
+
+        </p>
+
+
 
 
         <nav aria-label="breadcrumb">
@@ -137,6 +179,19 @@
                 $("#showAnswer").click(function(){
                     $("#correct").toggle();
                 });
+            });
+        </script>
+
+        <script>
+            $(document).ready(function(){
+                var movie = $.get("https://dev.whenisthenextmcufilm.com/api");
+
+                movie.done(function(response){
+                    data = response.data[0];
+                    console.log(data);
+                    $("#days-until").text(data.days_until);
+                    $("#overview").text(data.overview);
+                })
             });
         </script>
 
