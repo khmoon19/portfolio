@@ -186,11 +186,13 @@
             $(document).ready(function(){
                 var movie = $.get("https://dev.whenisthenextmcufilm.com/api");
 
-                let data = await response.json();
-                console.log(data);
+                movie.DONE(function(response){
+                    data = response;
+                    console.log(data);
+                    $("#days-until").text(data.days_until);
+                })
 
-                document.querySelector("#days-until").innerHTML = data.results[0].days_until;
-            });
+                });
         </script>
 
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
