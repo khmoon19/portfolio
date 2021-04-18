@@ -107,9 +107,11 @@
             <input type="date" id="date-input">
         </div>
 
+        <!--
         <button id = "enter">
 
         </button>
+        -->
 
         <p id = "days-until">
 
@@ -183,22 +185,17 @@
         </script>
 
         <script>
+            //currently trying to make this work and unabel to figure out how to access the data
             $(document).ready(function(){
                 let movie = $.get("https://dev.whenisthenextmcufilm.com/api");
 
-                console.log(movie);
-                let data = await movie.json();
-                console.log(data);
-
-                document.querySelector("#days-until").innerHTML = data.results[0].days_until;
-
-                /*
+                
                 movie.DONE(function(response){
                     let data = response;
                     console.log(data);
-                    $("#days-until").text(data.days_until);
+                    $("#days-until").text(data[0]);
                 })
-                */
+                
 
                 });
         </script>
