@@ -187,7 +187,7 @@
                 var movie = $.get("https://dev.whenisthenextmcufilm.com/api");
 
                 movie.DONE(function(response){
-                    data = response;
+                    let data = response;
                     console.log(data);
                     $("#days-until").text(data.days_until);
                 })
