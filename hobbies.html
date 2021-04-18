@@ -184,13 +184,21 @@
 
         <script>
             $(document).ready(function(){
-                var movie = $.get("https://dev.whenisthenextmcufilm.com/api");
+                let movie = $.get("https://dev.whenisthenextmcufilm.com/api");
 
+                console.log(movie);
+                let data = await movie.json();
+                console.log(data);
+
+                document.querySelector("#days-until").innerHTML = data.results[0].days_until;
+
+                /*
                 movie.DONE(function(response){
                     let data = response;
                     console.log(data);
                     $("#days-until").text(data.days_until);
                 })
+                */
 
                 });
         </script>
