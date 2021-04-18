@@ -193,7 +193,7 @@
                 movie.DONE(function(response){
                     let data = response;
                     console.log(data);
-                    $("#days-until").text(data[0]);
+                    $("#days-until").text(data.days_until);
                 })
                 
 
