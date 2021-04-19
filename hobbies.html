@@ -98,6 +98,8 @@
             I love movies and am a huge MCU fan so here is the next MCU feture coming out closest to the date entered.
         </p>
 
+
+        <!--working on this functionality and getting date formatted correctly to add to api call-->
         <h3>
             Input Date:
         </h3>
@@ -113,7 +115,10 @@
         </button>
         -->
 
-        <p id = "days-until">
+        <br>
+        
+
+        <p id = "title">
 
         </p>
 
@@ -121,17 +126,19 @@
 
         </p>
 
+        <p id = "type">
+
+        </p>
+
         <p id = "release-date">
 
         </p>
 
-        <p id = "title">
+        <p id = "days-until">
 
         </p>
 
-        <p id = "type">
-
-        </p>
+        
 
 
 
@@ -185,7 +192,6 @@
         </script>
 
         <script>
-            //currently trying to make this work and unabel to figure out how to access the data
             $(document).ready(function(){
                 let movie = $.get("https://dev.whenisthenextmcufilm.com/api");
 
@@ -193,7 +199,11 @@
                 movie.done(function(response){
                     let data = response;
                     console.log(data);
-                    $("#days-until").text(data.days_until);
+                    $("#days-until").text("Days Until: " + data.days_until);
+                    $("#overview").text("Overview: " + data.overview);
+                    $("#release-date").text("Release Date: " + data.release_date);
+                    $("#title").text("Title: " + data.title);
+                    $("#type").text("Type: " + data.type);
                 })
                 
 
