@@ -1,4 +1,3 @@
-
 .img-fluid{
 	max-width: 50%;
 	height: auto;
@@ -9,6 +8,11 @@ a{
 	font-weight: bold;
 	text-decoration: underline;
 	font-family: Helvetica, Arial, sans-serif;
+}
+
+h1, h2, h3, p, ul, button, iframe, img, div {
+	font-family: Helvetica, Arial, sans-serif;
+	padding: 0px 20px;
 }
 
 h1{
@@ -29,6 +33,7 @@ h3{
 p{
 	font-family: Helvetica, Arial, sans-serif;
 }
+
 .icon-large{
 	font-size: 24px;
 }
@@ -36,6 +41,10 @@ p{
 .breadcrumb{
 	color: #782FAC;
 }
+
+.carousel-inner img {
+	margin: auto;
+  }
 
 @media (prefers-color-scheme: dark){
 	html{
