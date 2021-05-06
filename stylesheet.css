@@ -44,7 +44,11 @@ p{
 
 .carousel-inner img {
 	margin: auto;
-  }
+}
+
+.navbar, .navbar-expand-lg, .navbar-light {
+	padding: 0px 0px;
+}
 
 @media (prefers-color-scheme: dark){
 	html{
