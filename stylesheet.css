@@ -10,28 +10,28 @@ a{
 	font-family: Helvetica, Arial, sans-serif;
 }
 
-h1, h2, h3, p, ul, button, iframe, img, div, form {
+h1, h2, h3, p, ul, button, iframe, img, div, form, .card {
 	font-family: Helvetica, Arial, sans-serif;
 	padding: 0px 20px;
 }
 
-h1{
+h1, h5{
 	color: #311432;
-	font-family: Helvetica, Arial, sans-serif;
+	
 }
 
 h2{
 	color: #4c0121;
-	font-family: Helvetica, Arial, sans-serif;
+
 }
 
 h3{
 	color: #663046;
-	font-family: Helvetica, Arial, sans-serif;
+	
 }
 
-p{
-	font-family: Helvetica, Arial, sans-serif;
+.btn, .btn-primary {
+	background-color: #782FAC;
 }
 
 .icon-large{
