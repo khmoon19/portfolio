@@ -46,6 +46,11 @@ h3{
 	color: #782FAC;
 }
 
+.d-inline-block {
+	height: 500px;
+	width: auto;
+}
+
 .carousel-inner img {
 	margin: auto;
 }
